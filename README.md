@@ -21,6 +21,6 @@ Swagger-UI
 
 
 ## Build With...
-Front-End: Vue.js 3.0.5
-Back-End Java 8 /Springboot 2.1.0
-Database:PostgreSQL 11
+* Front-End: Vue.js 3.0.5
+* Back-End Java 8 /Springboot 2.1.0
+* Database:PostgreSQL 11
