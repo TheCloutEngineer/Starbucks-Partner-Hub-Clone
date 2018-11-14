@@ -1,5 +1,5 @@
 # BaristaBoard
-An application for Baristas working at Java Jawn Cafe
+An application for Baristas and mangers working at "Java Jawn Cafe"
 
 # UML
 [Diagram](https://drive.google.com/file/d/1ZLq7YnlzJ_BnGZfDUkze-_AfKAFiAZc_/view?usp=sharing)
@@ -11,16 +11,24 @@ An application for Baristas working at Java Jawn Cafe
 
 # Contributing Guide
 TBD
+
 # Layout 
+
 * Landing Page
   *Username
   *Password
-* Cafe news
-  * Twiiter feed
-  * 
+* page 1
+  * Twiiter feed API
+  * Local Weather API
+  * Google Map API
+* page 2 
+  * expected pay per hour
+  * benefits hour tracker
+* Page 3
+  * Employee schedule
 
 # API Documentation
-Swagger-UI
+Swagger-UI used to track Back-End APIs.
 
 
 ## Build With...
