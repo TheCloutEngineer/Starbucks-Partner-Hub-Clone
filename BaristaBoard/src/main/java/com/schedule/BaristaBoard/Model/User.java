@@ -1,16 +1,19 @@
 package com.schedule.BaristaBoard.Model;
 
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
+@Table
 public abstract class User {
 
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
 private Long id;
 
-private String firstName;
-private String lastName;
-private String password;
+String firstName;
+String lastName;
+String password;
 
 
     public Long getId() {
