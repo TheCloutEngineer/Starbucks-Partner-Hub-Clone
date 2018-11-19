@@ -34,7 +34,4 @@ public class Schedule {
         return employeeId;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
-    }
 }
