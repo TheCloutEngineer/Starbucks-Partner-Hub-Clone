@@ -1,0 +1,4 @@
+2018-11-18 17:17:20.311 EST [90097] LOG:  could not translate host name "localhost", service "5432" to address: nodename nor servname provided, or not known
+2018-11-18 17:17:20.311 EST [90097] WARNING:  could not create listen socket for "localhost"
+2018-11-18 17:17:20.311 EST [90097] FATAL:  could not create any TCP/IP sockets
+2018-11-18 17:17:20.311 EST [90097] LOG:  database system is shut down
