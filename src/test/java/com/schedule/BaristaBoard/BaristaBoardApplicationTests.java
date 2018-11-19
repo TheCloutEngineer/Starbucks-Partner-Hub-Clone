@@ -1,4 +1,4 @@
-package com.schedule.BaristaBoard;
+package java.com.schedule.BaristaBoard;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
