@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class UserTest {
-    Administrator user = new Administrator();
+    Manager user = new Manager();
 
     @Test
     public void setId() {

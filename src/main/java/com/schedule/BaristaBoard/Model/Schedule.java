@@ -1,10 +1,17 @@
 package com.schedule.BaristaBoard.Model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,26 +19,8 @@ public class Schedule {
 
     @ManyToMany
     private Long employeeId;
+    private List<LocalDate> dateList;
 
-    List<LocalDate> dateList;
 
-    public Schedule() {
-    }
-
-    public Schedule(Long employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
 
 }
