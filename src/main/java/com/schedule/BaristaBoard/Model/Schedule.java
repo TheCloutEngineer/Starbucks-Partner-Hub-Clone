@@ -1,37 +1,26 @@
 package com.schedule.BaristaBoard.Model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@Getter @Setter
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToMany
-    private Long employeeId;
+    @OneToMany
+    private List<Employee> employeeId;
 
-    List<LocalDate> dateList;
+   // private List<LocalDate> dateList;
 
     public Schedule() {
     }
 
-    public Schedule(Long employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
 
 }

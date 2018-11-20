@@ -4,12 +4,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class UserTest {
-    User user = new Administrator((long) 24345332, "Ryan", "Jamison", "p@ssw0rd" );
+public class EmployeeTest {
+    User user = new Employee((long) 24332, "Clement", "Ojie", "Clemisthe^&Best1" );
 
     @Test
     public void setId() {
-        long x = 24345332;
+        long x = 24332;
         user.setId(user.id);
 
         long expected = x;
@@ -20,7 +20,7 @@ public class UserTest {
 
     @Test
     public void setFirstName() {
-        String name = "Ryan";
+        String name = "Clement";
         user.setFirstName(user.firstName);
 
         String expected = name;
@@ -31,7 +31,7 @@ public class UserTest {
 
     @Test
     public void setLastName() {
-        String name = "Jamison";
+        String name = "Ojie";
         user.setLastName(user.lastName);
 
         String expected = name;
@@ -42,7 +42,7 @@ public class UserTest {
 
     @Test
     public void setPassword() {
-        String password = "p@ssw0rd";
+        String password = "Clemisthe^&Best1";
         user.setPassword(user.password);
 
         String expected = password;
@@ -51,3 +51,4 @@ public class UserTest {
         assertEquals(expected, actual);
     }
 }
+
