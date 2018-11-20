@@ -1,6 +1,7 @@
 package com.schedule.BaristaBoard.Model;
 
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,8 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Getter
-@Setter
+@Data
 @Table(name = "`User`")
 public abstract class User {
     @Id

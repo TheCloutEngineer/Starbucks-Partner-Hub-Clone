@@ -12,10 +12,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EmployeeTest {
+public class AdministratorTest {
     @Test
     public void testGetterSetter() {
-        PojoClass pojoclass = PojoClassFactory.getPojoClass(Employee.class);
+        PojoClass pojoclass = PojoClassFactory.getPojoClass(Administrator.class);
         Validator validator = ValidatorBuilder
                 .create()
                 .with(new SetterMustExistRule())
@@ -25,5 +25,5 @@ public class EmployeeTest {
                 .build();
         validator.validate(pojoclass);
     }
-}
 
+}

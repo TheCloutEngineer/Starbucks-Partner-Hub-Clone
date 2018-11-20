@@ -1,14 +1,13 @@
 package com.schedule.BaristaBoard.Model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Getter @Setter
+@Data
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,7 +16,8 @@ public class Schedule {
     @OneToMany
     private List<Employee> employeeId;
 
-   // private List<LocalDate> dateList;
+
+    private List<LocalDate> dateList;
 
     public Schedule() {
     }

@@ -1,53 +1,28 @@
 package com.schedule.BaristaBoard.Model;
 
+import com.openpojo.reflection.PojoClass;
+import com.openpojo.reflection.impl.PojoClassFactory;
+import com.openpojo.validation.Validator;
+import com.openpojo.validation.ValidatorBuilder;
+import com.openpojo.validation.rule.impl.GetterMustExistRule;
+import com.openpojo.validation.rule.impl.SetterMustExistRule;
+import com.openpojo.validation.test.impl.GetterTester;
+import com.openpojo.validation.test.impl.SetterTester;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class UserTest {
-    User user = new Administrator((long) 24345332, "Ryan", "Jamison", "p@ssw0rd" );
-
     @Test
-    public void setId() {
-        long x = 24345332;
-        user.setId(user.id);
-
-        long expected = x;
-        long actual = user.getId();
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setFirstName() {
-        String name = "Ryan";
-        user.setFirstName(user.firstName);
-
-        String expected = name;
-        String actual = user.getFirstName();
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setLastName() {
-        String name = "Jamison";
-        user.setLastName(user.lastName);
-
-        String expected = name;
-        String actual = user.getLastName();
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setPassword() {
-        String password = "p@ssw0rd";
-        user.setPassword(user.password);
-
-        String expected = password;
-        String actual = user.getPassword();
-
-        assertEquals(expected, actual);
+    public void testGetterSetter() {
+        PojoClass pojoclass = PojoClassFactory.getPojoClass(User.class);
+        Validator validator = ValidatorBuilder
+                .create()
+                .with(new SetterMustExistRule())
+                .with(new GetterMustExistRule())
+                .with(new SetterTester())
+                .with(new GetterTester())
+                .build();
+        validator.validate(pojoclass);
     }
 }
