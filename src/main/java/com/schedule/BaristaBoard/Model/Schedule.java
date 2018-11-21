@@ -17,7 +17,7 @@ public class Schedule {
     private List<Employee> employeeId;
 
 
-    private List<LocalDate> dateList;
+    //private List<LocalDate> dateList;
 
     public Schedule() {
     }

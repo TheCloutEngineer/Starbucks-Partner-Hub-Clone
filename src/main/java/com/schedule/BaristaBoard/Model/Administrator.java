@@ -12,6 +12,7 @@ import java.util.List;
 @Table
 public class Administrator extends User {
 
+    @Id
     @OneToMany(targetEntity = Employee.class, mappedBy = "administratorId", fetch = FetchType.LAZY)
     private List<Employee> employeeId;
 
