@@ -10,7 +10,6 @@ import com.openpojo.validation.test.impl.GetterTester;
 import com.openpojo.validation.test.impl.SetterTester;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 public class UserTest {
     @Test
