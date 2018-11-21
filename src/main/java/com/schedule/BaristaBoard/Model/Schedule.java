@@ -14,9 +14,9 @@ public class Schedule {
     private Long id;
 
     @OneToMany
-    private List<Employee> employeeId;
-    private LocalDate dateList;
-
+    private List<Barista> employeeId;
+    private LocalDate date;
+    private String time;
     public Schedule() {
     }
 

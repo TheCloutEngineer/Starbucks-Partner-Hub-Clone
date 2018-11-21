@@ -9,18 +9,19 @@ import java.util.List;
 @Entity
 @Data
 @Table
-public class Employee extends User {
+public class Barista extends User {
 
-    @JoinColumn(nullable=false)
+    @JoinColumn(nullable = false)
     private Long administratorId;
 
     @OneToMany(targetEntity = Schedule.class, mappedBy = "employeeId", fetch = FetchType.LAZY)
     private List<Schedule> scheduleId;
 
-    public Employee(Long id, String firstname, String lastname, String password) {
-        this.id = id;
-        this.firstName = firstname;
-        this.lastName = lastname;
-        this.password = password;
+    public Barista() {
+    }
+
+    public Barista(String firstName, String lastName, String password) {
+        super(firstName, lastName, password);
+
     }
 }
