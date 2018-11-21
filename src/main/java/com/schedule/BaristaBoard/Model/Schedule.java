@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Data
@@ -13,11 +12,13 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany
-    private List<Barista> employeeId;
+
     private LocalDate date;
     private String time;
+    private Long baristaId;
+
     public Schedule() {
+
     }
 
 

@@ -12,14 +12,13 @@ import java.util.List;
 public class Barista extends User {
 
     @JoinColumn(nullable = false)
-    private Long administratorId;
+    private Long managerId;
 
-    @OneToMany(targetEntity = Schedule.class, mappedBy = "employeeId", fetch = FetchType.LAZY)
+    @OneToMany(targetEntity = Schedule.class, mappedBy = "baristaId", fetch = FetchType.LAZY)
     private List<Schedule> scheduleId;
 
     public Barista() {
     }
-
     public Barista(String firstName, String lastName, String password) {
         super(firstName, lastName, password);
 
