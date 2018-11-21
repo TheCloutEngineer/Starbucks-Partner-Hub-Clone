@@ -11,7 +11,7 @@ import java.util.List;
 @Table
 public class Employee extends User {
 
-    @JoinColumn(name="administrator", nullable=false)
+    @JoinColumn(nullable=false)
     private Long administratorId;
 
     @OneToMany(targetEntity = Schedule.class, mappedBy = "employeeId", fetch = FetchType.LAZY)
