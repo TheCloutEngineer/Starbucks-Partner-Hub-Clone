@@ -19,12 +19,12 @@ public class ScheduleController {
         ScheduleRepo scheduleRepo;
 
         @GetMapping(value = "/{id}")
-        public Optional<Schedule> getEmployeebyId(@PathVariable("id") Long id) {
+        public Optional<Schedule> getSchedulebyId(@PathVariable("id") Long id) {
             return scheduleRepo.findById(id);
         }
 
         @GetMapping(value = "/")
-        public List<Schedule> getAllEmployees() {
+        public List<Schedule> getAllSchedules() {
             return scheduleRepo.findAll();
         }
 
