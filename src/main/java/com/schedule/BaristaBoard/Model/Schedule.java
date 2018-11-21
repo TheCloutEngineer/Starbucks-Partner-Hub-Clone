@@ -15,9 +15,7 @@ public class Schedule {
 
     @OneToMany
     private List<Employee> employeeId;
-
-
-    private List<LocalDate> dateList;
+    private LocalDate dateList;
 
     public Schedule() {
     }
