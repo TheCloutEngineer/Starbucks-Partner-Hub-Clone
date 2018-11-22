@@ -23,7 +23,7 @@ public class BaristaRepoTest {
     private BaristaRepo baristaRepo;
 
     @Test
-    public void should_find_no_managers_if_repository_is_empty() {
+    public void should_find_no_baristas_if_repository_is_empty() {
         Iterable<Barista> baristas = baristaRepo.findAll();
 
         assertThat(baristas).isEmpty();
@@ -39,7 +39,7 @@ public class BaristaRepoTest {
 
     }
     @Test
-    public void should_delete_all_manager() {
+    public void should_delete_all_baristas() {
         entityManager.persist(new Barista("Clement", "Ojie","232@fg"));
         entityManager.persist(new Barista("Ryan", "DoubleC","232@fg" ));
 
@@ -49,7 +49,7 @@ public class BaristaRepoTest {
     }
 
     @Test
-    public void should_find_all_managers() {
+    public void should_find_all_baristas() {
         Barista barista = new Barista("Clement", "Ojie","232@fg" );
         entityManager.persist(barista);
 
@@ -65,7 +65,7 @@ public class BaristaRepoTest {
     }
 
     @Test
-    public void should_find_manager_by_lastName() {
+    public void should_find_barista_by_lastName() {
         Barista barista1 = new Barista("Clement", "Ojie","232@fg");
         entityManager.persist(barista1);
 
