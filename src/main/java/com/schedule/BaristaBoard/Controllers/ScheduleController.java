@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/schedule")
@@ -18,8 +17,8 @@ public class ScheduleController {
         ScheduleRepo scheduleRepo;
 
         @GetMapping(value = "/{id}")
-        public Optional<Schedule> getSchedulebyId(@PathVariable("id") Long id) {
-            return scheduleRepo.findById(id);
+        public Schedule getSchedulebyId(@PathVariable("id") Long id) {
+            return scheduleRepo.getOne(id);
         }
 
         @GetMapping(value = "/")

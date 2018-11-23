@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/admin")
+@RequestMapping(value = "/manager")
 public class ManagerController {
 
     @Autowired

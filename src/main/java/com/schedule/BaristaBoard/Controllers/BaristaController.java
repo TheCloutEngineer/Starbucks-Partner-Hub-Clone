@@ -11,14 +11,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/employee")
+@RequestMapping(value = "/barista")
 public class BaristaController {
     @Autowired
     BaristaRepo baristaRepo;
 
     @GetMapping(value = "/{id}")
-    public Optional<Barista> getEmployeebyId(@PathVariable("id") Long id) {
-        return baristaRepo.findById(id);
+    public Barista getEmployeebyId(@PathVariable("id") Long id) {
+        return baristaRepo.getOne(id);
     }
 
     @GetMapping(value = "/")
