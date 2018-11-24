@@ -3,22 +3,26 @@ package com.schedule.BaristaBoard.Model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Data
 @Table(name = "`User`")
 public abstract class User {
     @Id
-    @GeneratedValue()
-    protected Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String password;
 
-    protected String firstName;
-    protected String lastName;
-    protected String password;
+    public User(){}
+
+    public User(String firstName, String lastName, String password) {
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setPassword(password);
+    }
 
 
 }

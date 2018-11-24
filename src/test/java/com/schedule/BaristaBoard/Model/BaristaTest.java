@@ -10,12 +10,10 @@ import com.openpojo.validation.test.impl.GetterTester;
 import com.openpojo.validation.test.impl.SetterTester;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class AdministratorTest {
+public class BaristaTest {
     @Test
     public void testGetterSetter() {
-        PojoClass pojoclass = PojoClassFactory.getPojoClass(Administrator.class);
+        PojoClass pojoclass = PojoClassFactory.getPojoClass(Barista.class);
         Validator validator = ValidatorBuilder
                 .create()
                 .with(new SetterMustExistRule())
@@ -25,5 +23,4 @@ public class AdministratorTest {
                 .build();
         validator.validate(pojoclass);
     }
-
 }

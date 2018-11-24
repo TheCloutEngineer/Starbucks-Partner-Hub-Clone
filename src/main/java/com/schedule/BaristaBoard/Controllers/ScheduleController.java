@@ -1,15 +1,13 @@
-package com.schedule.BaristaBoard.controller;
+package com.schedule.BaristaBoard.Controllers;
 
-import com.schedule.BaristaBoard.Model.Employee;
 import com.schedule.BaristaBoard.Model.Schedule;
-import com.schedule.BaristaBoard.repositories.ScheduleRepo;
+import com.schedule.BaristaBoard.Repositories.ScheduleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/schedule")
@@ -19,8 +17,8 @@ public class ScheduleController {
         ScheduleRepo scheduleRepo;
 
         @GetMapping(value = "/{id}")
-        public Optional<Schedule> getSchedulebyId(@PathVariable("id") Long id) {
-            return scheduleRepo.findById(id);
+        public Schedule getSchedulebyId(@PathVariable("id") Long id) {
+            return scheduleRepo.getOne(id);
         }
 
         @GetMapping(value = "/")
