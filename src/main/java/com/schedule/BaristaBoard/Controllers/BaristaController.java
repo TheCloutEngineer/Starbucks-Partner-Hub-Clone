@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/barista")
@@ -17,29 +16,29 @@ public class BaristaController {
     BaristaRepo baristaRepo;
 
     @GetMapping(value = "/{id}")
-    public Barista getEmployeebyId(@PathVariable("id") Long id) {
+    public Barista getBaristabyId(@PathVariable("id") Long id) {
         return baristaRepo.getOne(id);
     }
 
     @GetMapping(value = "/")
-    public List<Barista> getAllEmployees() {
+    public List<Barista> getAllBarista() {
         return baristaRepo.findAll();
     }
 
     @PostMapping(value = "/")
-    public ResponseEntity<Barista> create(@Valid @RequestBody Barista employee) {
+    public ResponseEntity<Barista> createBarista(@Valid @RequestBody Barista employee) {
         baristaRepo.save(employee);
         return new ResponseEntity<>(employee, org.springframework.http.HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<?> update(@RequestBody Barista employee) {
+    public ResponseEntity<?> updateBarista(@RequestBody Barista employee) {
         Barista e = baristaRepo.save(employee);
         return new ResponseEntity<>(e, org.springframework.http.HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deleteBarista(@PathVariable("id") Long id) {
         baristaRepo.deleteById(id);
         return new ResponseEntity<>(org.springframework.http.HttpStatus.OK);
     }
