@@ -20,7 +20,7 @@ public class ManagerRepoTest {
     private TestEntityManager entityManager;
 
     @Autowired
-    private ManagerRepo managerRepo;
+    private com.schedule.BaristaBoard.Repositories.ManagerRepo managerRepo;
 
     @Test
     public void should_find_no_managers_if_repository_is_empty() {
