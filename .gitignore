@@ -145,6 +145,7 @@ local.properties
 # IntelliJ project files
 .idea
 *.iml
+<<<<<<< HEAD
 out
 gen
 .classpath
@@ -160,3 +161,16 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 .mvn
+=======
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+.DS_Store
+
+>>>>>>> daf5ba77dcab580274ecd65169f86e0a5bf05a43
