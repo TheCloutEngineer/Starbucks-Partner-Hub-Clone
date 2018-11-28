@@ -17,7 +17,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Vue.js]() - The web framework used
+* [React.js]() - 
 * [Maven]() - Dependency Management
 * [Java 8]() - 
 * [Spring Boot]()
