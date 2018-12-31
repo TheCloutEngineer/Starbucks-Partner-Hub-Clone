@@ -15,12 +15,13 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
+## Being Built With
 
-* [React.js]() - 
-* [Maven]() - Dependency Management
-* [Java 8]() - 
-* [Spring Boot]()
+* [React.js](https://reactjs.org/) - Front End Framework 
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [NPM](https://www.npmjs.com/) - Node Package manager
+* [Java 8](https://www.oracle.com/technetwork/java/javase/jre8-downloads-2133155.html) - 
+* [Spring Boot](https://spring.io/projects/spring-boot) - Enterprise Framework
 
 ![comparison-angular-react-vuejs](comparison-angular-react-vuejs.png)
 
@@ -39,8 +40,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Khalil Saboor** - *Github* - [Ksaboor](https://github.com/Ksaboor)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Ryan Smalls** -
+* **Clement Ojie** -
 
 ## License
 
