@@ -40,7 +40,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Khalil Saboor** - *Github* - [Ksaboor](https://github.com/Ksaboor)
-* **Ryan Smalls** -
+* **Ryan Small** -
 * **Clement Ojie** -
 
 ## License
